@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galop 5 - Muscles 1</title>
+    <script>
+        let answers = [
+        	"tobiano",
+            "overo",
+            "tovero",
+            "balzan",
+            "sabino"
+        ];
+
+        function check() {
+            for (var i = 1; i <= answers.length; i++) {
+                if (document.forms["form1"].elements[String(i)].value == answers[i - 1])
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "green";
+                else {
+                    document.forms["form1"].elements[String(i)].value += (" -> " + answers[i - 1]);
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function clean() {
+            for (var i = 1; i <= answers.length; i++) {
+                document.forms["form1"].elements[String(i)].value = "";
+                document.forms["form1"].elements[String(i)].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="squelette.html">Squelette</a>
+        <div class="dropdown">
+            <button class="dropbtn">Muscles</button>
+            <div class="dropdown-content">
+                <a href="muscles1.html">Types de muscles</a>
+                <a href="muscles2.html">Muscles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Panachures</button>
+            <div class="dropdown-content">
+                <a href="pie.html">de type Pie</a>
+                <a href="tachete.html">de type Tacheté</a>
+            </div>
+        </div>
+        <a href="adjonctions.html">Adjonctions</a>
+        <a href="lettresdressage.html">Lettres de Dressage</a>
+        <a href="mors.html">Mors de Filet</a>
+        <a href="grandsprincipesdapprentissage.html">Grands principes d’apprentissage</a>
+        <a href="autres.html">Autres ... </a>
+    </div>
+    <div class="div_1">
+        <div class="div_3">
+            <form id="form1">
+                <fieldset id="fieldset1">
+                    <legend>Les panachures de type pie :</legend>
+                    <div>
+                        <div class="div_4">
+                            <div class="div_5">
+                                <p><img src="src/tobiano.jpg" class="img5" id="img1"><br>
+                                - Le pie <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La tête est majoritairement colorée et les membres souvent blancs.<br>L’orientation des plages blanches est en général verticale.<br>Il existe au moins une plage blanche sur la ligne du dessus.<br><br>Le contour des plages blanches est net et régulier.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/overo.jpg" class="img5" id="img1"><br>
+                                - Le pie <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La tête est majoritairement blanche et les membres souvent colorés.<br>L’orientation des plages blanches est en général horizontale.<br>Il n’existe pas de plage blanche sur la ligne du dessus.<br><br>Le contour des plages blanches est irrégulier et flou.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/tovero.jpg" class="img5" id="img1"><br>
+                                - Le pie <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    Le cheval est quasiment blanc avec quelques plages colorées (qui déterminent la robe de base)<br>sur les flancs, les grassets, le haut de la tête et/ou la base de la queue.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/balzan.jpg" class="img5" id="img1"><br>
+                                - Le pie <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La tête, les membres, le ventre sont blancs.<br>
+                                    Le contour des plages blanches est net et régulier.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/sabino.jpg" class="img5" id="img1"><br>
+                                - Le pie <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La tête est majoritairement blanche.<br>
+                                    Le contour des plages blanches est très mélangé, très déchiqueté et très irrégulier.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" id="submit" value="Envoyer" onclick="check()">
+                            <input type="button" id="submit" value="Effacer" onclick="clean()">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body></html>

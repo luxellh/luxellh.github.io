@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galop - Muscles 2</title>
+    <script>
+        let answers = [
+            "C",
+            "M",
+            "R",
+            "B",
+            "P",
+            "F",
+            "A",
+            "K",
+            "V",
+            "E",
+            "S",
+            "H",
+            "G",
+            "I",
+            "X",
+            "L",
+            "D"
+        ];
+
+        function check() {
+            for (var i = 1; i <= answers.length; i++) {
+                if (document.forms["form1"].elements[String(i)].value == answers[i - 1])
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "green";
+                else {
+                    document.forms["form1"].elements[String(i)].value += (" -> " + answers[i - 1]);
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function clean() {
+            for (var i = 1; i <= answers.length; i++) {
+                document.forms["form1"].elements[String(i)].value = "";
+                document.forms["form1"].elements[String(i)].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+   <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="squelette.html">Squelette</a>
+        <div class="dropdown">
+            <button class="dropbtn">Muscles</button>
+            <div class="dropdown-content">
+                <a href="muscles1.html">Types de muscles</a>
+                <a href="muscles2.html">Muscles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Panachures</button>
+            <div class="dropdown-content">
+                <a href="pie.html">de type Pie</a>
+                <a href="tachete.html">de type Tacheté</a>
+            </div>
+        </div>
+        <a href="adjonctions.html">Adjonctions</a>
+        <a href="lettresdressage.html">Lettres de Dressage</a>
+        <a href="mors.html">Mors de Filet</a>
+        <a href="grandsprincipesdapprentissage.html">Grands principes d’apprentissage</a>
+        <a href="autres.html">Autres ... </a>
+    </div>
+    <div class="div_1">
+        <div>
+            <img src="src/lettresmanege.jpg" id="img3" />
+        </div>
+        <div class="div_3">
+            <form id="form1">
+                <fieldset>
+                    <legend>Les lettres de dressage :</legend>
+                    <div>
+                        <div>
+                            <p>01 : <input type="text" class="answers"><br></p>
+                            <p>02 : <input type="text" class="answers"><br></p>
+                            <p>03 : <input type="text" class="answers"><br></p>
+                            <p>04 : <input type="text" class="answers"><br></p>
+                            <p>05 : <input type="text" class="answers"><br></p>
+                            <p>06 : <input type="text" class="answers"><br></p>
+                            <p>07 : <input type="text" class="answers"><br></p>
+                            <p>08 : <input type="text" class="answers"><br></p>
+                            <p>09 : <input type="text" class="answers"><br></p>
+                            <p>10 : <input type="text" class="answers"><br></p>
+                            <p>11 : <input type="text" class="answers"><br></p>
+                            <p>12 : <input type="text" class="answers"><br></p>
+                            <p>13 : <input type="text" class="answers"><br></p>
+                            <p>14 : <input type="text" class="answers"><br></p>
+                            <p>15 : <input type="text" class="answers"><br></p>
+                            <p>16 : <input type="text" class="answers"><br></p>
+                            <p>17 : <input type="text" class="answers"><br></p>
+                        </div><br>
+                        <div class="buttons">
+                            <input type="button" id="submit" value="Envoyer" onclick="check()">
+                            <input type="button" id="submit" value="Effacer" onclick="clean()">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body></html>

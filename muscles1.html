@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galop 5 - Muscles 1</title>
+    <script>
+        let answers = [
+        	"lisses",
+            "vicéraux",
+            "blancs",
+            "ils assurent par une contraction involontaire, la digestion, la respiration, la circulation sanguine",
+            "striés",
+            "squelétiques",
+            "rouges",
+            "ils assurent par une contraction volontaire, la locomotion",
+            "cardiaque",
+            "c'est le myocarde. Sa contraction est involontaire, inconsciente et automatique",
+            "extenseurs",
+            "releveurs",
+            "ils éloignent un segment par rapport à l'axe du corps",
+            "fléchisseurs",
+            "abaisseurs",
+            "ils rapprochent un segment par rapport à l'axe du corps",
+            "adducteurs",
+            "ils ramènent un segment vers l'axe du corps",
+            "abducteurs",
+            "ils écartent un segment par rapport à l'axe du corps",
+            "rotateurs",
+            "ils font pivoter un segment par rapport à l'axe du corps ou par rapport à lui-même"
+        ];
+
+        function check() {
+            for (var i = 1; i <= answers.length; i++) {
+                if (document.forms["form1"].elements[String(i)].value == answers[i - 1])
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "green";
+                else {
+                    document.forms["form1"].elements[String(i)].value += (" -> " + answers[i - 1]);
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function clean() {
+            for (var i = 1; i <= answers.length; i++) {
+                document.forms["form1"].elements[String(i)].value = "";
+                document.forms["form1"].elements[String(i)].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="squelette.html">Squelette</a>
+        <div class="dropdown">
+            <button class="dropbtn">Muscles</button>
+            <div class="dropdown-content">
+                <a href="muscles1.html">Types de muscles</a>
+                <a href="muscles2.html">Muscles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Panachures</button>
+            <div class="dropdown-content">
+                <a href="pie.html">de type Pie</a>
+                <a href="tachete.html">de type Tacheté</a>
+            </div>
+        </div>
+        <a href="adjonctions.html">Adjonctions</a>
+        <a href="lettresdressage.html">Lettres de Dressage</a>
+        <a href="mors.html">Mors de Filet</a>
+        <a href="grandsprincipesdapprentissage.html">Grands principes d’apprentissage</a>
+        <a href="autres.html">Autres ... </a>
+    </div>
+    <div class="div_1">
+        <div class="div_2">
+            <img src="src/muscles1.jpg" id="img1" />
+        </div>
+        <div class="div_3">
+            <form id="form1">
+                <fieldset id="fieldset1">
+                    <legend>Les types de muscles :</legend>
+                    <div>
+                        <div>
+                            <p>
+                            	- Les muscles <input type="text" class="answers2"> ou <input type="text" class="answers2"> (muscles <input type="text" class="answers2">) :
+                            	<br>
+                            	<input type="text" class="answers3"> ...
+                            	<br>
+								- Les muscles <input type="text" class="answers2"> ou <input type="text" class="answers2"> (muscles <input type="text" class="answers2">) :
+								<br>
+								<input type="text" class="answers3">.
+								<br>
+								- Le muscle <input type="text" class="answers2"> :
+								<br>
+                                <input type="text" class="answers3">.
+                            </p>
+                            <p>
+                                <br><br>
+                                1: Les muscles <input type="text" class="answers2">, les muscles <input type="text" class="answers2"> :
+                                <br><input type="text" class="answers3">.
+                                <br><br>
+                                2: Les muscles <input type="text" class="answers2">, les muscles <input type="text" class="answers2"> :
+                                <br><input type="text" class="answers3">.
+                                <br><br>
+                                3: Les muscles <input type="text" class="answers2"> :<br /> <input type="text" class="answers3">.
+                                <br><br>
+                                4: Les muscles <input type="text" class="answers2"> :<br /> <input type="text" class="answers3">.
+                                <br><br>
+                                5: Les muscles <input type="text" class="answers2"> :<br /> <input type="text" class="answers3">.
+                                <br><br>
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" id="submit" value="Envoyer" onclick="check()">
+                            <input type="button" id="submit" value="Effacer" onclick="clean()">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galop 5 - Muscles 1</title>
+    <script>
+        let answers = [
+        	"léopard",
+            "tacheté",
+            "cape",
+            "marmoré",
+            "rayé",
+            "bringé"
+        ];
+
+        function check() {
+            for (var i = 1; i <= answers.length; i++) {
+                if (document.forms["form1"].elements[String(i)].value == answers[i - 1])
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "green";
+                else {
+                    document.forms["form1"].elements[String(i)].value += (" -> " + answers[i - 1]);
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function clean() {
+            for (var i = 1; i <= answers.length; i++) {
+                document.forms["form1"].elements[String(i)].value = "";
+                document.forms["form1"].elements[String(i)].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="squelette.html">Squelette</a>
+        <div class="dropdown">
+            <button class="dropbtn">Muscles</button>
+            <div class="dropdown-content">
+                <a href="muscles1.html">Types de muscles</a>
+                <a href="muscles2.html">Muscles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Panachures</button>
+            <div class="dropdown-content">
+                <a href="pie.html">de type Pie</a>
+                <a href="tachete.html">de type Tacheté</a>
+            </div>
+        </div>
+        <a href="adjonctions.html">Adjonctions</a>
+        <a href="lettresdressage.html">Lettres de Dressage</a>
+        <a href="mors.html">Mors de Filet</a>
+        <a href="grandsprincipesdapprentissage.html">Grands principes d’apprentissage</a>
+        <a href="autres.html">Autres ... </a>
+    </div>
+    <div class="div_1">
+        <div class="div_3">
+            <form id="form1">
+                <fieldset id="fieldset1">
+                    <legend>Les panachures de type tacheté :</legend>
+                    <div>
+                        <div class="div_4">
+                            <div class="div_5">
+                                <p><img src="src/leopard.jpg" class="img5" id="img1"><br>
+                                - Le <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    Le --- est blanc uniforme (avec la peau rose sous le blanc),<br> sur lequel sont nettement visibles des taches de couleur de forme et de taille variables, réparties sur tout le corps.<br>Ce sont ces taches colorées qui permettent de déterminer la robe de base.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/tachete.jpg" class="img5" id="img1"><br>
+                                - Le <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    Le --- présente de nombreuses tâches colorées de taille et de forme inégales et variables sur le corps.<br>La robe de base se reconnaît en dehors des taches.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/cape.jpg" class="img5" id="img1"><img src="src/cape2.jpg" class="img5" id="img1"><br>
+                                - La <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La --- est une panachure blanche (avec une peau rose en dessous) d’un seul tenant sur la croupe.<br>Elle peut s’étendre jusqu’au garrot.<br>Les contours sont variables, de très nets à déchiquetés ou mélangés.<br>Cette panachure peut être tachetée et l’on parle alors de --- tachetée. Sinon, on parle de -- uniforme.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/marmore.jpg" class="img5" id="img1"><br>
+                                - Le <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    Le --- est une robe envahie de poils blancs, (robe paraissant presque blanche),<br> sauf au niveau des articulations où des poils colorés sont présents (de la couleur de la robe de base).
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/raye.jpg" class="img5" id="img1"><br>
+                                - Le <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La robe est couverte de rayures blanches.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/bringe.jpg" class="img5" id="img1"><br>
+                                - Le <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    La robe est couverte de rayures noires.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" id="submit" value="Envoyer" onclick="check()">
+                            <input type="button" id="submit" value="Effacer" onclick="clean()">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galop 5 - Muscles 1</title>
+    <script>
+        let answers = [
+        	"raie de mulet",
+            "bande scapulaire",
+            "bande cruciale",
+            "zébrures",
+            "cap de maure",
+            "pangaré",
+            "pommelée",
+            "floconnée",
+            "charbonnée",
+            "lavés",
+            "argentés",
+            "mélangés",
+            "champagne"
+        ];
+
+        function check() {
+            for (var i = 1; i <= answers.length; i++) {
+                if (document.forms["form1"].elements[String(i)].value == answers[i - 1])
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "green";
+                else {
+                    document.forms["form1"].elements[String(i)].value += (" -> " + answers[i - 1]);
+                    document.forms["form1"].elements[String(i)].style.backgroundColor = "red";
+                }
+            }
+        }
+
+        function clean() {
+            for (var i = 1; i <= answers.length; i++) {
+                document.forms["form1"].elements[String(i)].value = "";
+                document.forms["form1"].elements[String(i)].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="squelette.html">Squelette</a>
+        <div class="dropdown">
+            <button class="dropbtn">Muscles</button>
+            <div class="dropdown-content">
+                <a href="muscles1.html">Types de muscles</a>
+                <a href="muscles2.html">Muscles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Panachures</button>
+            <div class="dropdown-content">
+                <a href="pie.html">de type Pie</a>
+                <a href="tachete.html">de type Tacheté</a>
+            </div>
+        </div>
+        <a href="adjonctions.html">Adjonctions</a>
+        <a href="lettresdressage.html">Lettres de Dressage</a>
+        <a href="mors.html">Mors de Filet</a>
+        <a href="grandsprincipesdapprentissage.html">Grands principes d’apprentissage</a>
+        <a href="autres.html">Autres ... </a>
+    </div>
+    <div class="div_1">
+        <div class="div_3">
+            <form id="form1">
+                <fieldset id="fieldset1">
+                    <legend>Les panachures de type tacheté :</legend>
+                    <div>
+                        <h1>Les poils</h1><p><br></p>
+                        <h2>Plus foncé</h2>
+                        <div class="div_4">
+                            <div class="div_5">
+                                <p><img src="src/raiedemulet.jpg" class="img5" id="img1">
+                                    <img src="src/bandescapulaire.jpg" class="img5" id="img1">
+                                    <img src="src/bandecruciale.jpg" class="img5" id="img1"><br>
+                                - <input type="text" class="answers4">, <input type="text" class="answers4"> et <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Bande le long de la ligne du dessus.<br>
+                                    - Bande descendant sur les épaules.<br>
+                                    - Association des deux, croix dont le centre est au niveau du garrot.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/zebrures.jpg" class="img5" id="img1"><br>
+                                - <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Plus foncés que la robe de base et sur les membres.
+                                </p>
+                            </div>
+                            <div class="div_5">
+                                <p><img src="src/capdemaure.jpg" class="img5" id="img1"><br>
+                                - tête en <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Plus foncés que la robe de base et sur toute la tête.
+                                </p>
+                            </div>
+                        </div>
+                        <h2>Plus clair</h2>
+                            <div class="div_5">
+                                <p><img src="src/pangare.jpg" class="img5" id="img1"><br>
+                                - effet <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Plus clairs que la robe de base et sur le corps :<br>zones plus claires au niveau du grasset, des coudes, de l’intérieur des cuisses, aux ars et au bout du nez.
+                                </p>
+                            </div>
+                        <h2>En zones sombres et claires</h2>
+                            <div class="div_5">
+                                <p><img src="src/pangare2.jpg" class="img5" id="img1"><br>
+                                - robe <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Poils en réseaux de zones sombres et claires et en forme de pommes, dans lesquelles le centre est plus clair que le contour.<br>Attention, certains chevaux voient leur robe se pommeler quand ils sont en très bonne santé et très bonne condition physique.
+                                </p>
+                            </div>
+                        <h2>Blancs</h2>
+                            <div class="div_5">
+                                <p><img src="src/floconne.jpg" class="img5" id="img1"><br>
+                                - robe <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Petites touffes de poils blancs (ressemblant à des flocons de neige) réparties sur toute la robe.
+                                </p>
+                            </div>
+                        <h2>Noirs</h2>
+                            <div class="div_5">
+                                <p><img src="" class="img5" id="img1"><br>
+                                - robe <input type="text" class="answers4"> :<br><br>
+                                </p>
+                                <p>
+                                    - Petites touffes de poils noirs mélangés à la robe de base, disposés aléatoirement sur la robe.
+                                </p>
+                            </div>
+                        <h1>Les crins</h1>
+                        <div class="div_5">
+                            <p><img src="src/laves.jpg" class="img5" id="img1"><img src="src/argentes.jpg" class="img5" id="img1"><img src="src/melanges.jpg" class="img5" id="img1"><br>
+                            - crins <input type="text" class="answers4">, <input type="text" class="answers4"> et <input type="text" class="answers4"> :<br><br>
+                            </p>
+                            <p>
+                                - Plus clairs que les poils de la robe.<br>
+                                - De la couleur de l’argent.<br>
+                                - Crins blancs et crins de couleur.
+                            </p>
+                        </div>
+                        <h1>La peau</h1>
+                        <div class="div_5">
+                            <p><img src="src/champagne.jpg" class="img5" id="img1"><br>
+                            - peau <input type="text" class="answers4"> :<br><br>
+                            </p>
+                            <p>
+                                - Peau rose piquetée de petits points de peau noire.
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" id="submit" value="Envoyer" onclick="check()">
+                            <input type="button" id="submit" value="Effacer" onclick="clean()">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
