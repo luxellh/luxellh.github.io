@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.div_1 {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.div_3 {
+    margin-left: 30px;
+}
+
+.div_4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.div_5 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.div_6 {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.div_7 {
+    margin-left: -550px;
+}
+
+.p_1 {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.divMenu {
+    padding: 30px;
+}
+
+fieldset {
+    margin-top: 30px;
+    padding: 10px;
+    width: 200%;
+}
+
+#fieldset1 {
+    width: 100%;
+}
+
+.answers {
+    width: 80%;
+    background-color: white;
+}
+
+.answers4 {
+    width: 190px;
+    background-color: white;
+}
+
+.answers2 {
+    width: 150px;
+    background-color: white;
+}
+
+.answers3 {
+    width: 500px;
+    background-color: white;
+}
+
+#img2 {
+    width: 90%;
+    padding-top: 15px;
+    padding-right: 140px;
+    padding-left: 30px;
+}
+
+#img3 {
+    height: 85%;
+    margin-left: -10px;
+}
+
+#img4 {
+    height: 75%;
+    margin-left: 50px;
+}
+
+.img5 {
+    margin-right: 30px;
+}
+
+#img6 {
+    width: 55%;
+    margin-left: 20px;
+}
+
+#submit {
+	padding-right: 5px;
+	padding-left: 5px;
+}
